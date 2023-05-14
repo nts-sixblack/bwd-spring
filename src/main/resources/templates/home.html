@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<html lang="vi">-->
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="image/logo.png"/>
+    <title>Royal BBQ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/22e87e415b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/homeStyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/footerStyle.css">
+
+    <link rel="stylesheet" href="css/homeReponsiveStyle.css">
+    <link rel="stylesheet" href="css/iconStyle.css">
+
+    <script src="js/homeScript.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!--Header-->
+<div th:replace="header :: #headerr"></div>
+<!--/Header-->
+
+
+<!--Slide-->
+
+
+
+<!--Slide-->
+<div class="main">
+    <div class="slider">
+        <div class="slide active">
+            <h1>WELCOME</h1>
+            <p>ROYAL BBQ</p>
+        </div>
+        <div class="slide">
+            <h1>HẢI SẢN</h1>
+            <p>Các món hải sản tươi ngon</p>
+        </div>
+        <div class="slide">
+            <h1>THỊT NƯỚNG</h1>
+            <p>Hương vị đậm đà, màu sắc bắt mắt, ăn là nhớ mãi</p>
+        </div>
+    </div>
+    <div class="slider-btn">
+        <a href="#" class="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a href="#" class="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</div>
+<div class="divParallax">
+    <div class="row res">
+        <div class="col-sm-12 col-md-6">
+            <h1>NHÀ HÀNG</h1>
+            <hr class="light">
+            <div class="content">
+                <p> &emsp;Nhà hàng VUA ĐỒ NƯỚNG là một trong những nhà hàng nổi tiếng về đồ nướng. Nhà hàng chúng tôi luôn hướng đến món ăn ngon
+                    thích hợp cho từng hương vị 4 mùa: xuân, hạ, thu, đông. Nhà hàng không chỉ ngon về các món ăn, mà nơi đây luôn có nhân viên
+                    phục vụ ân cần chu đáo, không chỉ trên bàn tiệc mà còn thân thiện trong giao tiếp.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-sm-6 col-6"></div>
+                <div class="col-lg-3 col-sm-3 col-3">
+                    <div class="vitri-btn">
+                        <button class="btn">Tìm Chỗ</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-5">
+            <img src="image/divParallax.jpg">
+        </div>
+    </div>
+
+</div>
+<div class="divParallax">
+    <!--picture-->
+</div>
+
+<!--menu-->
+<div class="divParallax">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 menu" style="margin-top: 30px;">
+                        <img src="image/menuimg1.png">
+                        <img src="image/menuimg3.png">
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 menu"
+                         style="margin-top: 30px;">
+                        <img src="image/menuimg2.png">
+                        <img src="image/menuimg4.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 menu">
+                <h1>THỰC ĐƠN</h1>
+                <hr class="light">
+                <div class="content">
+                    <p> &emsp; Các món đồ nướng mang ẩm hưởng theo từng mùa, chính vì vậy khách hàng khi đến với cửa hàng chúng tôi,
+                        sẽ không lo ngại về khẩu vị của từng mùa. Hiện tại, để phù hợp với thực đơn cho từng mùa thì nhà hàng chúng tôi có 100
+                        món tương đương với mỗi mùa sẽ có từng loại món khác nhau.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 col-sm-6 col-6"></div>
+                    <div class="col-lg-3 col-sm-3 col-3">
+                        <a href="menu">
+                            <div class="vitri-btn">
+                                <button class="btn">Xem thực đơn</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="divParallax">
+    <!--picture-->
+</div>
+
+<div class="divParallax">
+
+    <div class="left">
+        <div class="container-fluid">
+            <form action="reservation" method="post">
+                <h1>LIÊN HỆ ĐẶT BÀN</h1>
+                <p> &emsp; Đặt bàn khách hàng có thể đặt trực tiếp tại nhà hàng hoặc đặt online qua fanpage của nhà hàng. Đặt biệt lưu ý,
+                    khi khách hàng đặt bàn online thì sẽ nhận được rất nhiều ưu đãi từ nhà hàng chúng tôi. Để biết rõ hơn về
+                    những ưu đãi này, thì mời bạn kích vào đường link này: <a href="tintuc.html">TIN TỨC</a>
+                <div>
+                    <label class="custom-field ">
+<!--                        <c:choose>-->
+<!--                            <c:when test="${check > 0}">-->
+<!--                                <input type="text" required name="name" value="${account.name}"/>-->
+<!--                            </c:when>-->
+<!--                            <c:otherwise>-->
+                                <input type="text" required name="name"/>
+<!--                            </c:otherwise>-->
+                        </c:choose>
+                        <span class="placeholder">Họ và Tên</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="custom-field ">
+                        <input type="text" required name="phone"/>
+                        <span class="placeholder">Số Điện Thoại</span>
+                    </label>
+                </div>
+                <div class="vitri2-btn">
+                    <button class="btn" type="submit">Liên Hệ</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="right"><!--img--></div>
+
+
+</div>
+<!--<%@ include file="include/footer.jsp"%>-->
+<div th:replace="footer :: #footerr"></div>
+
+<div>
+    <div th:include="icon :: #iconnn"></div>
+</div>
+<!-- partial -->
+<script src="js/homeScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/png" href="image/logo.png"/>
+    <title>Liên hệ</title>
+    <link rel="stylesheet" type="text/css" href="css/reservationStyle.css">
+    <link rel="stylesheet" href="css/footerStyle.css">
+    <link rel="stylesheet" href="css/headerStyle.css">
+    <link rel="stylesheet" href="css/rateStyle.css">
+    <link rel="stylesheet" href="css/iconStyle.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+</head>
+<body>
+<!--header-->
+<div th:insert="header :: #headerr"></div>
+<!--header-->
+
+<div style="margin-top: 90px">
+    <div class="container-fluid">
+        <div class="row contact">
+            <div class="col-md-12 col1">
+                <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6592.237126713485!2d108.25137755263593!3d15.97311230237625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421972d8f017d3%3A0xc76fba8f369ddbb2!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCAtIEjDoG4sIMSQ4bqhaSBo4buNYyDEkMOgIE7hurVuZw!5e0!3m2!1svi!2s!4v1620393282299!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+<!--        <%&#45;&#45;        <div class="row contact">&#45;&#45;%>-->
+<!--        <%&#45;&#45;            <div class="col-md-12">&#45;&#45;%>-->
+<!--            <%&#45;&#45;                <h1 class="borderleft">Liên hệ với chúng tôi</h1>&#45;&#45;%>-->
+<!--            <%&#45;&#45;                <h6>Nếu có bất kì thắc mắc hoặc đánh giá chất lượng phục vụ hãy liên hệ chúng tôi.</h6>&#45;&#45;%>-->
+<!--            <%&#45;&#45;            </div>&#45;&#45;%>-->
+<!--        <%&#45;&#45;            <form action="advisory" method="post">&#45;&#45;%>-->
+<!--            <%&#45;&#45;                <div class = "col-md-7 col2">&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <div class="col-md-12">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <h4>Để lại lời nhắn cho chúng tôi</h4>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <h6 style = "text-align: justify;">Bạn cần chia sẻ thông tin hoặc muốn đóng góp về chất lượng phục vụ của nhân viên Royal BBQ nói riêng và nhận xét về Royal BBQ nói chung. Hãy để lại lời nhắn để giúp chúng tôi hoàn thiện hơn.</h6>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                    </div>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <div class="col-md-4">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <h5>Họ và tên</h5>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <input type="text" class="form-control" name="name">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                    </div>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <div class="col-md-4">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <h5>Email</h5>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <input type="text" class="form-control" name="email">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                    </div>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <div class="col-md-4">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <h5>SĐT</h5>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <input type="text" class="form-control" name="phone">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                    </div>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <div class="col-md-12">&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <h5>Phản hồi của bạn</h5>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                        <div style="margin-bottom: 10px;">&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                            <div id="editor">&#45;&#45;%>-->
+<!--                            <%&#45;&#45;                                <input type="text" name="search" placeholder="Thêm bình luận">&#45;&#45;%>-->
+<!--                            <%&#45;&#45;                            </div>&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                            <script>&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                                ClassicEditor&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                                    .create(document.querySelector('#editor'))&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                                    .catch(error => {&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                                        console.error(error);&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                                    });&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                            </script>&#45;&#45;%>-->
+<!--                        <%&#45;&#45;                        </div>&#45;&#45;%>-->
+<!--                    <%&#45;&#45;                    </div>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                </div>&#45;&#45;%>-->
+<!--            <%&#45;&#45;                <div class="col-md-5 col2">&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <h4>Địa chỉ</h4>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <p>470 Trần Đại Nghĩa,Phường Hòa Hải, Quận Ngũ Hành Sơn, TP.Đà Nẵng</p>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <p><i class="fas fa-phone"></i> 0968604438</p>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <p><i class="fas fa-envelope"></i> ldatuan.20it7@vku.udn.vn</p>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <h4>Giờ mở cửa</h4>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <p>9.00 am - 14.00pm, 18.00pm - 23.00pm</p>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                </div>&#45;&#45;%>-->
+<!--            <%&#45;&#45;                <div class="col-md-12 text-center col2">&#45;&#45;%>-->
+<!--                <%&#45;&#45;                    <button class="btn" type="submit">Gửi phản hồi</button>&#45;&#45;%>-->
+<!--                <%&#45;&#45;                </div>&#45;&#45;%>-->
+<!--            <%&#45;&#45;            </form>&#45;&#45;%>-->
+<!--        <%&#45;&#45;        </div>&#45;&#45;%>-->
+        <hr>
+
+        <h2 class="borderleft">Đánh giá và nhận xét</h2>
+        <div class="row">
+            <div class="col-md-4 rate ">
+                <div class="text-center">
+<!--                    <p><span><c:out value="${averageRate}"/></span>/5</p>-->
+<!--                    <p>(<c:out value="${countRate}"/> lượt đánh giá)</p>-->
+                    <p>
+                        Chọn để xếp hạng:
+                    </p>
+                    <div>
+                        <div class="vote-star">
+                            <div class="star-widget">
+                                <input type="radio" class="star" value="5" name="rate" id="rate-5">
+                                <label for="rate-5" class="fas fa-star"></label>
+                                <input type="radio" class="star" value="4" name="rate" id="rate-4">
+                                <label for="rate-4" class="fas fa-star"></label>
+                                <input type="radio" class="star" value="3" name="rate" id="rate-3">
+                                <label for="rate-3" class="fas fa-star"></label>
+                                <input type="radio" class="star" value="2" name="rate" id="rate-2">
+                                <label for="rate-2" class="fas fa-star"></label>
+                                <input type="radio" class="star" value="1" name="rate" id="rate-1">
+                                <label for="rate-1" class="fas fa-star"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <input type="radio" name="cmt" id="danhgia">
+                <label for="danhgia" id="lb_danhgia" onclick="vote();">Đánh giá</label>
+                <input type="radio" name="cmt" id="binhluan">
+                <label for="binhluan" id="lb_binhluan" onclick="cmt();">Bình luận</label>
+                <div class="yscroll">
+                    <div id="cmt_danhgia">
+<!--                        <c:forEach var="rate" items="${listRate}">-->
+                            <div class="cmt">
+                                <div class="avt">
+                                    <img src="image/avatar.jpeg">
+                                </div>
+                                <div class="text">
+                                    <p><b class="name">
+<!--                                        <c:out value="${rate.name}"/>-->
+<!--                                        <c:forEach begin="1" end="${rate.star}">-->
+                                            <i class="fas fa-star"></i>
+<!--                                        </c:forEach>-->
+<!--                                        <c:forEach begin="1" end="${rate.no}">-->
+                                            <i class="far fa-star"></i>
+<!--                                        </c:forEach>-->
+                                    </b></p>
+<!--                                    <p><c:out value="${rate.text}"/></p>-->
+                                </div>
+
+                            </div>
+<!--                        </c:forEach>-->
+                    </div>
+                    <div id="cmt_binhluan">
+<!--                        <c:forEach var="comment" items="${listComment}">-->
+                            <div class="cmt">
+                                <div class="avt">
+                                    <img src="image/avatar.jpeg">
+                                </div>
+                                <div class="text">
+                                    <p><b class="name">
+<!--                                        <c:out value="${comment.name}"/>-->
+                                    </b></p>
+<!--                                    <p><c:out value="${comment.text}"/></p>-->
+                                </div>
+                            </div>
+<!--                        </c:forEach>-->
+                    </div>
+                </div>
+                <form action="rate" method="post">
+                    <div id="write_dg" class="row">
+                        <div class="col-md-1 col-sm-1 avt">
+                            <img src="image/avatar.jpeg">
+                        </div>
+                        <div class="col-md-11 col-sm-11 write">
+                            <input type="text" name="name" value="${account.name}" style="display: none">
+                            <input type="text" name="email" value="${account.email}" style="display: none">
+                            <input type="text" name="rate" id="numberStar" style="display: none">
+<!--                            <c:if test="${account.buy > 0}">-->
+                                <input type="text" name="text" placeholder="Viết đánh giá..">
+                                <button type="submit" hidden></button>
+<!--                            </c:if>-->
+                        </div>
+                    </div>
+                </form>
+                <form action="writeComment" method="post">
+                    <div id="write_bl" class="row">
+                        <div class="col-md-1 col-sm-1 avt">
+                            <img src="image/avatar.jpeg">
+                        </div>
+                        <div class="col-md-11 col-sm-11 write">
+                            <input type="text" name="name" value="${account.name}" style="display: none">
+                            <input type="text" name="email" value="${account.email}" style="display: none">
+<!--                            <c:if test="${check > 0}">-->
+                                <input name="text" type="text" placeholder="Viết bình luận..">
+                                <button type="submit" hidden></button>
+<!--                            </c:if>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--body-->
+<!--footer-->
+<div th:replace="footer :: #footerr"></div>
+
+<div>
+    <div th:include="icon :: #iconnn"></div>
+</div>
+<!--footer-->
+<script type="text/javascript">
+    function cmt(){
+        document.getElementById('cmt_danhgia').style.display = 'none';
+        document.getElementById('cmt_binhluan').style.display = 'block';
+        document.getElementById('write_dg').style.display = 'none';
+        document.getElementById('write_bl').style.display = 'block';
+    }
+
+    function vote(){
+        document.getElementById('cmt_danhgia').style.display = 'block';
+        document.getElementById('cmt_binhluan').style.display = 'none';
+        document.getElementById('write_dg').style.display = 'block';
+        document.getElementById('write_bl').style.display = 'none';
+    }
+
+    var listStar = document.getElementsByClassName('star');
+    for(var i = 0; i < listStar.length; i++){
+        var choose = listStar[i];
+        choose.addEventListener('click',function(event){
+            var click = event.target;
+            var value = click.value;
+            var star = document.getElementById('numberStar');
+            star.value = value;
+        })
+    }
+
+
+</script>
+</body>
+</html>

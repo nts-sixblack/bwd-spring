@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/22e87e415b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/headerStyle">
+    <link rel="stylesheet" href="css/footerStyle.css">
+    <link rel="shortcut icon" type="image/png" href="image/logo.png" />
+    <link rel="stylesheet" href="css/promotionStyle.css">
+    <title>KHUYẾN MÃI</title>
+</head>
+<style>
+    body{
+        background-color: white;
+    }
+    span{
+        color: black;
+    }
+    h3{
+        color: black;
+    }
+</style>
+
+<body>
+<div th:include="header :: #headerr"></div>
+<!--header-->
+
+<div>
+    <div class="container">
+        <div class=" khungbang" style="margin-top: 250px;">
+            <h3>CHƯƠNG TRÌNH KHUYẾN MẠI - CHIÊU ĐÃI HẤP DẪN</h3>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-sm-12 title">
+                <div class="e-title canhletren slideanim">
+                    <a href="promotion1">
+                        <h3 class="mt-5">ƯU ĐÃI KHUNG GIỜ VÀNG</h3>
+                    </a>
+                    <span> Đặc Biệt: Tặng thức uống không giới hạn cho phụ nữ mỗi ngày trong khung giờ 17:30 – 20:30
+                            Giải phóng bản thân khỏi những bí bách của cuộc sống thường nhật,
+                            lả lơi theo điệu nhạc sôi động và cạn ly rượu nồng tại quán phía ngoài trời
+                            trước khi màn đêm buông xuống sẽ giúp tâm trạng thêm thư thái.
+                        </span>
+                    <img class="slideanim imgsale" src="image/3.png">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12 title">
+                <div class="e-title slideanim">
+                    <a href="promotion2">
+                        <h3> ƯU ĐÃI NHÓM 6 NGƯỜI </h3>
+                    </a>
+                    <span> Tặng 1 combo đồ nướng trị giá 1.200.000 cho nhóm 6 người
+                            <img class="slideanim imgsale" src="image/2.png"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-sm-12 title">
+                <div class="e-title canhletren slideanim">
+                    <a href="promotion3">
+                        <h3>ƯU ĐÃI CÁC DỊP LỄ</h3>
+                    </a>
+                    <span>
+                            Nhà hàng Royal BBQ với phong cách đa dạng trong mọi sự kiện,
+                            sảnh tiệc - một không gian
+                            hứa hẹn sẽ đem đến bữa tiệc sang trọng,
+                            dịch vụ ẩm thực hàng đầu cho buổi tiệc tân niên của khách hàng.
+                        </span>
+                    <img class="slideanim imgsale" src="image/met.png">
+
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12 title">
+                <div class="e-title canhletrai slideanim">
+                    <a href="promotion4">
+                        <h3>KHÉP LẠI MỘT NGÀY VỚI COMBO ĂN TỐI CÙNG ROYAL BBQ</h3>
+                    </a>
+                    <span>
+                            Bạn cần bàn bạc công việc với đối tác, một buổi gặp gỡ với bạn bè,
+                            hay chỉ đơn giản bạn cần tới Royal BBQ trong không gian xanh của nhà hàng
+                            và tận hưởng làn gió mát từ con sông,
+                            đây là một lựa chọn không thể tuyệt vời hơn.
+                        </span>
+                    <img class=" slideanim imgsale" src="image/nhahang2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $(Window).scroll(function () {
+            $(".slideanim").each(function () {
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 10000) {
+                    $(this).addClass("slide");
+                }
+            })
+        })
+    })
+</script>
+<!--footer-->
+<div th:replace="footer :: #footerr"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<!--footer-->
+</body>
+</html>

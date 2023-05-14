@@ -1,0 +1,23 @@
+@media (max-width: 750px){
+    .main .slider .slide h1{
+        font-size: 5.5em;
+    }
+}
+
+@media (max-width: 620px){
+    .main .slider .slide h1{
+        font-size: 4.5em;
+    }
+}
+
+@media (max-width: 530px){
+    .main .slider .slide h1{
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 410px){
+    .main .slider .slide h1{
+        font-size: 2.5em;
+    }
+}

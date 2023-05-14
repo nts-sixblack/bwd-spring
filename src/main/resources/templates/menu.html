@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<html lang="vi">-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/22e87e415b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/headerStyle.css">
+    <link rel="stylesheet" href="css/footerStyle.css">
+    <link rel="stylesheet" href="css/menuStyle.css">
+    <link rel="stylesheet" href="css/mobileMenuStyle.css">
+
+    <link rel="stylesheet" href="css/iconStyle.css">
+
+
+    <link rel="shortcut icon" type="image/png" href="image/logo.png"/>
+
+    <title>Menu</title>
+</head>
+<body>
+<div th:include="header :: #headerr"></div>
+<div class="pc">
+    <div class="container">
+        <div id="seafood" onclick="seafood()">
+            <img src="image/seafood.jpg" alt=" " />
+        </div>
+
+        <div id="meat" onclick="meat()">
+            <img src="image/meat.jpg" alt=" " />
+        </div>
+
+        <div id="drink" onclick="drink()">
+            <img src="image/drink.jpg" alt=" " />
+        </div>
+
+        <!-- seafood -->
+        <div id="new-seafood">
+            <img  alt="" />
+            <div id="seafood-content">
+                <h2>Thực đơn</h2>
+                <ul>
+                    <li th:each="appetizer: ${appetizer}" th:onclick="'seafoodName(\'' + ${appetizer.getIndexx()} + '\')'" th:utext="${appetizer.getName()}"></li>
+                    <!--                    <c:forEach var="food" items="${listApptizer}">-->
+                    <!--                        <li onclick="seafoodName(<c:out value="${food.next}"/>)"><c:out value="${food.name}"/></li>-->
+                    <!--                    </c:forEach>-->
+                </ul>
+            </div>
+        </div>
+        <div id="seafood-image">
+            <img th:each="appetizer : ${appetizer}" class="seafood-slide food-image" th:src="${appetizer.getImage()}" alt=" " />
+            <!--            <c:forEach var="food" items="${listApptizer}">-->
+            <!--                <img class="seafood-slide food-image" src="image/<c:out value="${food.image}"/>" alt=" " />-->
+            <!--            </c:forEach>-->
+            <div id="seafood-name">
+                    <div th:each="appetizer : ${appetizer}" class="information name-seafood">
+                        <div>
+                            <p th:utext="${appetizer.getName()}" ></p>
+                            <p><span th:utext="${appetizer.getPrice()}" ></span> VND</p>
+                            <p th:utext="${appetizer.getImage()}" style="display: none;"></p>
+                            <p th:utext="${appetizer.getFoodId}" style="display: none"></p>
+                        </div>
+                        <button class="add">Đặt món</button>
+                    </div>
+                <!--                <c:forEach var="food" items="${listApptizer}">-->
+<!--                <div class="information name-seafood">-->
+<!--                    <div>-->
+
+<!--                        &lt;!&ndash;                            <p><c:out value="${food.name}"/></p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p><span><c:out value="${food.price}"/></span> VND</p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p style="display: none;">image/<c:out value="${food.image}"/></p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p style="display: none"><c:out value="${food.id}"/></p>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;                        <c:if test="${newOrder > 0}">&ndash;&gt;-->
+<!--                    <button class="add">Đặt món</button>-->
+<!--                    &lt;!&ndash;                        </c:if>&ndash;&gt;-->
+<!--                </div>-->
+                <!--                </c:forEach>-->
+            </div>
+        </div>
+        <div id="seafood-nav" onclick="back()">
+        </div>
+        <!-- //seafood -->
+
+        <!-- meat -->
+        <div id="new-meat">
+            <div id="meat-content">
+                <h2>Thực đơn</h2>
+                <ul>
+                        <li th:each="food: ${foods}" th:onclick="'meatName(\'' + ${food.getIndexx()} + '\')'" th:utext="${food.getName()}"></li>
+
+                    <!--                    <c:forEach var="food" items="${listFood}">-->
+                    <!--                        <li onclick="meatName(<c:out value="${food.next}"/>)"><c:out value="${food.name}"/></li>-->
+                    <!--                    </c:forEach>-->
+                </ul>
+
+            </div>
+        </div>
+        <div id="meat-image">
+            <img th:each="food: ${foods}" class="meat-slide food-image" th:src="${food.getImage()}" alt=" " />
+
+            <!--            <c:forEach var="food" items="${listFood}">-->
+            <!--                <img class="meat-slide food-image" src="image/<c:out value="${food.image}"/>" alt=" " />-->
+            <!--            </c:forEach>-->
+            <div id="meat-name">
+                    <div th:each="food : ${foods}" class="information name-meat">
+                        <div>
+                            <p th:utext="${food.getName()}" ></p>
+                            <p><span th:utext="${food.getPrice()}" ></span> VND</p>
+                            <p th:utext="${food.getImage()}" style="display: none;"></p>
+                            <p th:utext="${food.getFoodId}" style="display: none"></p>
+                        </div>
+                        <button class="add">Đặt món</button>
+                    </div>
+                <!--                <c:forEach var="food" items="${listFood}">-->
+<!--                <div class="information name-meat">-->
+<!--                    <div>-->
+<!--                        &lt;!&ndash;                            <p><c:out value="${food.name}"/></p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p><span><c:out value="${food.price}"/></span> VND</p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p style="display: none;">image/<c:out value="${food.image}"/></p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p style="display: none"><c:out value="${food.id}"/></p>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;                        <c:if test="${newOrder > 0}">&ndash;&gt;-->
+<!--                    <button class="add">Đặt món</button>-->
+<!--                    &lt;!&ndash;                        </c:if>&ndash;&gt;-->
+<!--                </div>-->
+                <!--                </c:forEach>-->
+            </div>
+        </div>
+        <div id="meat-nav" onclick="back()">
+            <img src="image/meat.jpg" alt=" " />
+        </div>
+        <!-- //meat -->
+        <!-- drink -->
+        <div id="new-drink">
+            <div id="drink-content">
+                <h2>Thức đơn</h2>
+                <ul>
+                        <li th:each="drink: ${drinks}" th:onclick="'drinkName(\'' + ${drink.getIndexx()} + '\')'" th:utext="${drink.getName()}"></li>
+                    <!--                    <c:forEach var="food" items="${listDrink}">-->
+                    <!--                        <li onclick="drinkName(<c:out value="${food.next}"/>)"><c:out value="${food.name}"/></li>-->
+                    <!--                    </c:forEach>-->
+                </ul>
+
+            </div>
+        </div>
+        <div id="drink-image">
+            <img th:each="drink: ${drinks}" class="drink-slide food-image" th:src="${drink.getImage()}" alt=" " />
+            <!--            <c:forEach var="food" items="${listDrink}">-->
+            <!--                <img class="drink-slide food-image" src="image/<c:out value="${food.image}"/>" alt=" " />-->
+            <!--            </c:forEach>-->
+
+            <div id="drink-name">
+
+                    <div class="information name-drink" th:each="drink : ${drinks}" >
+                        <div>
+                            <p th:utext="${drink.getName()}" ></p>
+                            <p><span th:utext="${drink.getPrice()}"></span> VND</p>
+                            <p th:utext="${drink.getImage()}" style="display: none;"></p>
+                            <p th:utext="${drink.getFoodId}" style="display: none"></p>
+                        </div>
+                        <button class="add">Đặt món</button>
+                    </div>
+
+                <!--                <c:forEach var="food" items="${listDrink}">-->
+<!--                <div class="information name-drink">-->
+<!--                    <div>-->
+<!--                        &lt;!&ndash;                            <p><c:out value="${food.name}"/></p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p><span><c:out value="${food.price}"/></span> VND</p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p style="display: none;">image/<c:out value="${food.image}"/></p>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                            <p style="display: none"><c:out value="${food.id}"/></p>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;                        <c:if test="${newOrder > 0}">&ndash;&gt;-->
+<!--                    <button class="add">Đặt món</button>-->
+<!--                    &lt;!&ndash;                        </c:if>&ndash;&gt;-->
+<!--                </div>-->
+                <!--                </c:forEach>-->
+            </div>
+        </div>
+        <div id="drink-nav" onclick="back()">
+            <img src="image/drink.jpg" alt=" " />
+        </div>
+        <!-- //drink -->
+    </div>
+    <!---------order--------->
+    <!--    <c:if test="${newOrder > 0}">-->
+<!--    <form action="orderFood" method="post">-->
+        <div class="order">
+            <h2 class="left_border">Danh sách đặt món: </h2>
+            <div class="main">
+                <div class="side_order" id="listFood">
+                </div>
+                <input name="number" type="number" id="numberFood" style="display: none;" >
+                <div class="total">
+                    <h3>Tổng tiền</h3>
+                    <span><span id="sumPrice">0</span> VND</span>
+                    <button type="submit">
+                        Hoàn tất đặt bàn
+                    </button>
+                </div>
+            </div>
+        </div>
+<!--    </form>-->
+    <!--    </c:if>-->
+</div>
+<div class="mobi">
+    <div class="m_banner">
+        <h1>Thực Đơn</h1>
+        <p>Bạn muốn đặt món gì?</p>
+    </div>
+    <div class="m_type">
+        <div class="m_item" id="m_seafood" style="color: black;" onclick="m_seafood()">Hải sản</div>
+        <div class="m_item" id="m_meat" onclick="m_meat()">Thịt nướng</div>
+        <div class="m_item" id="m_drink" onclick="m_drink()">Đồ uống</div>
+    </div>
+    <div class="m_list" id="m_display_seafood">
+        <!--        <c:forEach var="food" items="${listApptizer}">-->
+        <div class="m_card">
+            <!--                <img src="image/<c:out value="${food.image}"/>">-->
+            <!--                <p hidden>image/<c:out value="${food.image}"/></p>-->
+            <!--                <div class="m_card-name"><b><c:out value="${food.name}"/></b></div>-->
+            <!--                <div class="m_card-price"><span><c:out value="${food.price}"/></span> VND</div>-->
+            <!--                <div class="m_id" hidden><p><c:out value="${food.id}"/></p></div>-->
+            <!--                <c:if test="${newOrder > 0}">-->
+            <button class="m_orderbtn">
+                <i class="fas fa-plus"></i>
+            </button>
+            <!--                </c:if>-->
+        </div>
+        <!--        </c:forEach>-->
+
+    </div>
+    <div class="m_list" id="m_display_meat">
+        <!--        <c:forEach var="food" items="${listFood}">-->
+        <div class="m_card">
+            <!--                <img src="image/<c:out value="${food.image}"/>">-->
+            <!--                <p hidden>image/<c:out value="${food.image}"/></p>-->
+            <!--                <div class="m_card-name"><b><c:out value="${food.name}"/></b></div>-->
+            <!--                <div class="m_card-price"><span><c:out value="${food.price}"/></span> VND</div>-->
+            <!--                <div class="m_id" hidden><p><c:out value="${food.id}"/></p></div>-->
+            <!--                <c:if test="${newOrder > 0}">-->
+            <button class="m_orderbtn">
+                <i class="fas fa-plus"></i>
+            </button>
+            <!--                </c:if>-->
+        </div>
+        <!--        </c:forEach>-->
+    </div>
+    <div class="m_list" id="m_display_drink">
+        <!--        <c:forEach var="food" items="${listDrink}">-->
+        <div class="m_card">
+            <!--                <img src="image/<c:out value="${food.image}"/>">-->
+            <!--                <p hidden>image/<c:out value="${food.image}"/></p>-->
+            <!--                <div class="m_card-name"><b><c:out value="${food.name}"/></b></div>-->
+            <!--                <div class="m_card-price"><span><c:out value="${food.price}"/></span> VND</div>-->
+            <!--                <div class="m_id" hidden><p><c:out value="${food.id}"/></p></div>-->
+            <!--                <c:if test="${newOrder > 0}">-->
+            <button class="m_orderbtn">
+                <i class="fas fa-plus"></i>
+            </button>
+            <!--                </c:if>-->
+        </div>
+        <!--        </c:forEach>-->
+    </div>
+    <!--    <c:if test="${newOrder > 0}">-->
+    <form action="orderFood" method="post">
+        <h1 class="m-left_border ">Danh sách đặt làm</h1>
+        <div class="m_total" id="m_listTotal">
+
+        </div>
+        <div class="m_price">
+            <div class="m_sumprice">
+                Tổng chi phí:
+                <p><span id="m_sumPrice">0</span> VND</p>
+            </div>
+            <div class="m_btn">
+                <input name="number" type="number" id="numberFoodMobile" style="display: none;" >
+                <button type="submit">Đặt món</button>
+            </div>
+        </div>
+    </form>
+    <!--    </c:if>-->
+</div>
+
+
+<div>
+    <!--    <jsp:include page="include/footer.jsp"/>-->
+    <div th:replace="footer :: #footerr"></div>
+</div>
+
+<div>
+    <!--    <jsp:include page="include/icon.jsp"/>-->
+    <div th:include="icon :: #iconnn"></div>
+</div>
+<script src="js/scriptMenu.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

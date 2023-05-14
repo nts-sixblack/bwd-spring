@@ -1,0 +1,36 @@
+@media (max-width: 1024px){
+    .side{
+        display: none;
+    }
+    .layout{
+        max-height: 1366px;
+        height: 1366px;
+    }
+    .nav{
+        max-height: 100%;
+        z-index: 3;
+        padding-top: 60px;
+    }
+    .detail{
+        max-height: 100%;
+        flex-grow: 1;
+    }
+    .main{
+        margin-top: 60px !important;
+        height: 900px !important;
+    }
+    .detail_mail{
+        height: 700px;
+        margin-bottom: 10px;
+    }
+    .content{
+        height: 650px;
+    }
+    .navbar{
+        display: block;
+    }
+}
+
+@media(max-width: 376px){
+
+}

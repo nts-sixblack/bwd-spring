@@ -1,0 +1,159 @@
+
+.yscroll{
+    height: 300px;
+    overflow-y: scroll;
+    border-left: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.borderleft{
+    border-left: 5px solid #985e52 ;
+    padding-left: 8px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+.rate .fa-star{
+    font-size: 10px;
+    margin: 2px;
+    padding: 2px;
+}
+
+.rate .text-right{
+    display: flex;
+    flex-flow: column;
+    font-weight: 2px;
+}
+.rate p {
+    color: gray;
+}
+.rate span{
+    font-size: 50px;
+    color: black;
+}
+
+/*---------------------------Vote star---------------------------------------*/
+.vote-star{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vote-star .star-widget input{
+    display: none;
+}
+
+.star-widget label{
+    font-size: 20px !important;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+.star-widget input:not(:checked) ~ .star-widget label:hover,
+.star-widget input:not(:checked) ~ .star-widget label:hover ~ .star-widget label{
+    color: #985e52;
+}
+.star-widget input:checked ~ label{
+    color: #985e52;
+}
+/*---------------------------danhgia/binhluan---------------------------------------*/
+#danhgia,
+#binhluan{
+    display: none;
+}
+
+
+#lb_danhgia,
+#lb_binhluan{
+    position: relative;
+    width: 80px;
+    font-size: 18px;
+}
+#lb_danhgia:after,
+#lb_binhluan:after{
+    content: "";
+    position: absolute;
+    background-color: #985e52;
+    height: 2px;
+    width: 0;
+    left: 0px;
+    bottom: -2px;
+    transition: .2s linear;
+}
+#lb_danhgia:hover:after,
+#lb_binhluan:hover:after
+{
+    width: 50%;
+    transition: .2s linear;
+}
+#lb_danhgia:hover,
+#lb_binhluan:hover,
+#lb_danhgia:focus,
+#lb_binhluan:focus{
+    color: black !important;
+}
+
+
+/*---------------------------cmt---------------------------------------*/
+.cmt{
+    margin-bottom: 10px;
+    display: flex;
+    padding-left: 10px;
+    position: relative;
+}
+.avt img{
+    margin: 0 auto;
+    margin-top: 4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.text{
+    background: rgba(194, 194, 194, 0.2);
+    border-radius: 8px;
+    margin-left: 2px;
+    padding: 3px 15px 0 15px;
+}
+.name i{
+    font-size: 8px;
+    color: #985e52;
+}
+
+/*----------------------------Write cmt---------------------------------------*/
+
+#write_dg,
+#write_bl{
+    display: flex;
+}
+.write input{
+    border-radius: 30px;
+    background: rgba(194, 194, 194, 0.2);
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    padding: 7px;
+    padding-left: 15px;
+    width: 100%;
+}
+#write_bl,
+#binhluan{
+    display: none;
+}
+
+
+#cmt_danhgia{
+    display: block;
+}
+
+#cmt_danhgia{
+    display: none;
+}
+
+#write_dg{
+    display: block;
+}
+
+#write_dg{
+    display: none;
+}

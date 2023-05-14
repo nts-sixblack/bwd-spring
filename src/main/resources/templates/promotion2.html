@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/22e87e415b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/headerStyle">
+    <link rel="stylesheet" href="css/footerStyle.css">
+    <link rel="shortcut icon" type="image/png" href="image/logo.png" />
+
+    <link rel="stylesheet" href="css/promotionStyle.css">
+    <title>ƯU ĐÃI</title>
+</head>
+
+<body>
+<div th:insert="header :: #headerr"></div>
+<!--header-->
+
+<ul class="slideshow">
+    <li><span>Image 01</span>
+        <!-- <div>
+            <h3>Chương trình khuyến mãi </h3>
+        </div> -->
+    </li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+    <li><span>Image 06</span></li>
+</ul>
+
+<div class="container">
+    <div class="e-title">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 blabla"  style="background: white; color: black">
+                <div class="khungbang" style="margin-bottom: 10px;">
+                    <h3>ƯU ĐÃI NHÓM 6 NGƯỜI</h3>
+                </div>
+                <span> Tặng 1 combo đồ nướng trị giá 1.200.000 cho nhóm 6 người
+                        Đặc biệt giảm ưu đãi cho các hội nhóm liên hoan tại nhà hàng
+
+                        <img class="imgsale" src="image/met.png">
+                    </span>
+                <span>
+                        Món ăn mang âm hưởng Á-Âu của nhà hàng chúng tôi, luôn được coi trọng
+                        trong khâu hàng chuẩn bị cũng như trong khâu chế biến
+                        Không chỉ món ăn mà đồ uống cũng mang sắc thái riêng theo từng mùa
+                    </span>
+                <img class="imgsale" src="image/banghe.png">
+                <img class="imgsale" src="image/nen2.png">
+                <div class="canchu">
+                        <span><strong>
+                                <p>Có hạn chế về số lượng, nhanh tay đặt chỗ:</p>
+                                <p>𝗛𝗢𝗧𝗟𝗜𝗡𝗘: 0968604438</p>
+                                <p>𝗘𝗺𝗮𝗶𝗹: RoyalBBQ@gmail.com.vn</p>
+                            </strong>
+                        </span>
+                </div>
+            </div>
+        </div>
+        <%--        <div class="pagination">--%>
+        <%--            <a href="content2.html">❮</a>--%>
+        <%--            <a href="content4.html">❯</a>--%>
+        <%--        </div>--%>
+    </div>
+</div>
+<!--footer-->
+<div th:replace="footer :: #footerr"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<!--footer-->
+</body>
+</html>

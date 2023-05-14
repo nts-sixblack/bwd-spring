@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#comment-box{
+    width: 100%;
+    height: 400px;
+    /*border: 1px solid;*/
+    overflow-y: scroll;
+    background-color: #;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#comment-box .comment{
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+
+#comment-box .user{
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: -5px;
+    height: 25px;
+}
+
+#comment-box .user p{
+    /*float: left;*/
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+#comment-box .user .check{
+    color: #fd6;
+}
+
+#comment-box .comment .text{
+    float: left;
+    text-align: justify;
+    color: white;
+    border-radius: 20px;
+    background: #888;
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 80%;
+}
+
+#comment-box .comment .text p{
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#comment-box .my-comment{
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+}
+
+#comment-box .my-comment .text{
+	text-align: justify;
+	color: white;
+	border-radius: 20px;
+	background: #00675C;
+	margin-top: 10px;
+	margin-right: 10px;
+	max-width: 80%;
+	float: right;
+}
+
+#comment-box .my-comment .text p{
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#write-comment{
+    width: 100%;
+    height: 70px;
+}
+
+#write-comment button{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#write-comment .none{
+    display: none;
+}
+
+.vote-star{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vote-star .star-widget input{
+    display: none;
+}
+
+.star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+input:checked ~ label{
+    color: #fd4;
+}
+
+

@@ -1,0 +1,193 @@
+.mobi{
+    display: none;
+}
+
+@media (max-width: 414px){
+    body{
+        max-width: 414px;
+        background: #fdfcfc;
+    }
+    .pc{
+        display: none;
+    }
+    .mobi{
+        display: flex;
+        flex-flow: column;
+    }
+    .m_banner{
+        max-width: 100%;
+        font-size: 18px;
+        margin: 150px 0 0 30px;
+    }
+    .m_type{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 18px;
+        color: #949494;
+        overflow-x: scroll;
+        display: flex;
+
+    }
+    .m_type .m_item{
+        flex-basis: 90px;
+        text-align: center;
+        transition: .5s;
+    }
+    .m_list{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 5px;
+        overflow-x: scroll;
+        float: left;
+        display: flex;
+        height: 470px;
+
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .m_card{
+        background-color: white;
+        width: 310px;
+        height: 400px;
+        padding: 20px;
+        border-radius: 20px;
+        font-size: 18px;
+        position: relative;
+        margin-right: 30px;
+        box-shadow: 5px 5px 5px #ccc;
+        animation-name: change_tab;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+    }
+    @keyframes change_tab {
+        0% {
+            transform: translateY(0px);
+            /*opacity: none;*/
+        }
+        30% {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+    .m_card img{
+        width: 270px;
+        height: 320px;
+        border-radius: 30px;
+        box-shadow: 3px 3px 3px #ccc;
+    }
+    .m_card-name{
+        margin: 2px auto 10px 10px;
+    }
+    .m_card-price{
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: -10px;
+    }
+    .m_orderbtn{
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        color: white;
+        background-color: #985e52;
+        padding: 8px 13px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+    }
+    .m-left_border{
+        margin: 5px auto 0 20px;
+        border-left: 4px solid #985e52;
+        padding-left: 4px;
+        font-size: 20px;
+    }
+    .m_total{
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 20px;
+        background: #fff;
+        border-radius: 15px;
+        display: flex;
+        flex-flow: column;
+        padding: 20px;
+    }
+    .m_total-card{
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .m_img-total-card{
+        flex-basis: 120px;
+    }
+    .m_img-total-card img{
+        width: 115px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 2px #ccc;
+    }
+    .m_infor-total-card{
+        flex-grow: 1;
+        font-size: 16px;
+    }
+    .m_remove-total-card{
+        flex-basis: 20px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .m_remove-total-card .fa-minus-square{
+        cursor: pointer;
+        color: #ccc;
+    }
+    .m_remove-total-card .fa-minus-square:hover{
+        color: red;
+    }
+    .m_infor-total-card .input-number{
+        width: 40px;
+    }
+    .m_price{
+        display: flex;
+        flex-flow: column;
+        width: 85%;
+        margin: 0 auto;
+        background: #985e52;
+        margin-top: 10px;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+    }
+    .m_sumprice{
+        flex-grow: 1;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 15px;
+    }
+    .m_sumprice p{
+        font-size: 20px;
+    }
+    .m_btn{
+        /*flex-basis: 170px;*/
+        margin: 10px 0;
+    }
+    .m_btn button {
+        width: 100%;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        height: 40px;
+        font-size: 23px;
+    }
+
+}
+
+#m_display_drink,
+#m_display_meat{
+    display: none;
+}

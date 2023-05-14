@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Blogs</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/reservationStyle.css">
+    <link rel="stylesheet" href="css/footerStyle.css">
+    <link rel="stylesheet" href="css/iconStyle.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="image/logo.png"/>
+
+</head>
+<body>
+<!-- Navigation-->
+<div th:insert="header :: #headerr"></div>
+<!-- Navigation-->
+<!--body-->
+<div class="container-fluid">
+    <div class="row blogs">
+        <div class="col-xl-8 blogs-top-right">
+            <img  src="image/web.jpg">
+        </div>
+        <div class="col-xl-4 blogs-top-left">
+            <h1>VỀ ROYAL BBQ</h1>
+            <h4>THIÊN ĐƯỜNG ẨM THỰC</h4>
+            <p>Qua hơn 3 năm hoạt động trong lĩnh vực ẩm thực với bao thăng trầm và thách thức, giờ đây nhà hàng Royal BBQ đã lớn mạnh và phát triển đi lên cùng với nền ẩm thực nước nhà, trở thành một thương hiệu uy tín, tin cậy và quen thuộc với thực khách trong và ngoài nước.Ngoài ra, còn tự hào khi đã có nhiều chi nhánh trải dài khắp mảnh đất hình chữ S và ra cả khu vực.</p>
+            <a href="introduce">Đọc thêm&nbsp;</a>
+            <label>| 22.06.2021</label>
+        </div>
+    </div>
+</div><!--container-fluid-->
+<div class="container">
+    <div class="row blogs">
+        <div class="col-md-6 blogs-bottom">
+            <img src="image/blog1.jpg">
+            <h4>VOUCHER 100K CHO HÓA ĐƠN TRÊN 500K NHÂN DỊP 30 - 4</h4>
+            <p>Dịp lễ là dịp mà người dân trên cả nước được nghỉ ngơi sau những ngày tháng dài cố gắng học tập và làm việc. Nhiều người đã lên kế hoạch từ rất sớm để có dịp tận hưởng ...</p>
+            <a href="introduce">Đọc thêm&nbsp;</a>
+            <label>| 22.06.2021</label>
+        </div>
+        <div class="col-md-6 blogs-bottom">
+            <img src="image/blog3.jpg">
+            <h4>GIẢM 15% KHI TỔ CHỨC SINH NHẬT TẠI QUÁN</h4>
+            <p>Chúng ta ai cũng có một ngày sinh nhật. Vì vậy, ai cũng muốn ngày quan trọng của mình làm sao thật ý nghĩa và vui vẻ. Muốn cùng đoàn viên dùng gia đình tổ chức một bữa ...</p>
+            <a href="introduce">Đọc thêm&nbsp;</a>
+            <label>| 22.06.2021</label>
+        </div>
+        <div class="col-md-6 blogs-bottom">
+            <img src="image/uu.png">
+            <h4>ƯU ĐÃI KHI ĐẶT BÀN ONLINE</h4>
+            <p>Chúng ta ai cũng có một ngày sinh nhật. Vì vậy, ai cũng muốn ngày quan trọng của mình làm sao thật ý nghĩa và vui vẻ. Muốn cùng đoàn viên dùng gia đình tổ chức một bữa ...</p>
+            <a href="introduce">Đọc thêm&nbsp;</a>
+            <label>| 22.06.2021</label>
+        </div>
+        <div class="col-md-6 blogs-bottom">
+            <img src="image/blog4.jpg">
+            <h4>CHECK-IN TẠI QUÁN NHẬN NGAY VOUCHER GIẢM GIÁ</h4>
+            <p>Chúng ta ai cũng có một ngày sinh nhật. Vì vậy, ai cũng muốn ngày quan trọng của mình làm sao thật ý nghĩa và vui vẻ. Muốn cùng đoàn viên dùng gia đình tổ chức một bữa ...</p>
+            <a href="introduce">Đọc thêm&nbsp;</a>
+            <label>| 22.06.2021</label>
+        </div>
+    </div>
+</div>
+<!--body-->
+<!--footer-->
+<div th:replace="footer :: #footerr"></div>
+<!--footer-->
+<div>
+    <div th:include="icon :: #iconnn"></div>
+</div>
+</body>
+</html>

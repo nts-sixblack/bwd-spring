@@ -1,0 +1,21 @@
+.card_order{
+    background-color:  #0e0e23;
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.img_order img{
+    width: 120px;
+    height: 70px;
+    border-radius: 10px;
+}
+.infor_order{
+    margin-left: 10px;
+    flex-grow: 1;
+}
+.total p{
+    margin-left: 40px;
+    font-size: 16px;
+}

@@ -1,0 +1,34 @@
+
+.header{
+    font-family:'Truculenta', sans-serif;
+}
+.header img{
+    width: 50px;
+}
+
+.navbar-nav{
+    text-align: right;
+    padding-right: 20px;
+}
+.navbar-toggler{
+    outline: none !important;
+    border: none!important;
+}
+.nav-link {
+    font-size: 18px;
+    margin: 3px;
+    font-weight: 500;
+}
+.nav-link:hover{
+    border-bottom: 2px solid #985e52;
+    transition: .25s ease;
+}
+@media (max-width: 1000px){
+    .nav-link:hover{
+        border-bottom: none !important;
+    }
+    .ml-auto{
+        float: left !important;
+        text-align: left !important;
+    }
+}
